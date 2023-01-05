@@ -16,16 +16,13 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-	
-
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
-                </configuration>
-            </plugin>
+			<plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M7</version>
+        </plugin>
+        
+        
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -49,6 +46,8 @@
                                 <!-- supports wildcard or name pattern -->
                                 <param>**/*.json</param>
                             </jsonFiles>
+                            <!-- optional, defaults to outputDirectory if not specified -->
+                            
                             
                             <parallelTesting>false</parallelTesting>
                             <!-- optional, set true to group features by its Ids -->
@@ -61,17 +60,20 @@
                     </execution>
                 </executions>
             </plugin>
+     
+          
+            
+            
         </plugins>
 
 	</build>
+	<!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+
+
 
 
 	<dependencies>
-		<dependency>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-surefire-plugin</artifactId>
-			<version>3.0.0-M7</version>
-		</dependency>
+		
 
 		
 		

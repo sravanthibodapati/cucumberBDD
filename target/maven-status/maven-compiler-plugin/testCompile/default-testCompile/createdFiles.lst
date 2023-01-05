@@ -1,0 +1,5 @@
+resources\AddPlacePayload.class
+resources\Utils.class
+resources\APIResources.class
+cucumber\Options\TestRunner.class
+stepDefinition\StepDefinition.class
